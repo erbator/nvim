@@ -1,2 +1,2 @@
-require("lualine").setup({ options = { theme = "tokyonight" } })
+require("lualine").setup({ options = { theme = "everforest" } })
 require("nvim-highlight-colors").setup({})
