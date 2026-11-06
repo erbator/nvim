@@ -20,11 +20,11 @@ set.termguicolors = true
 set.background = "dark"
 set.signcolumn = "yes"
 
+-- netrw
+vim.g.netrw_banner = 0
+
 -- cursor line
 set.cursorline = true
-
--- 80th column
-set.colorcolumn = "80"
 
 -- clipboard
 set.clipboard:append("unnamedplus")
