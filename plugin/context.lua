@@ -81,13 +81,13 @@ local function update_ctx()
         vim.api.nvim_win_set_config(ctx_win, config)
     else
         ctx_win = vim.api.nvim_open_win(ctx_buf, false, config)
-        vim.wo[ctx_win].winhighlight = "Normal:TonyContext,NormalFloat:TonyContext"
+        vim.wo[ctx_win].winhighlight = "Normal:Context,NormalFloat:Context"
     end
 end
 
-vim.api.nvim_set_hl(0, "TonyContext", { link = "NormalFloat", default = true })
+vim.api.nvim_set_hl(0, "Context", { link = "NormalFloat", default = true })
 
-local group = vim.api.nvim_create_augroup("TonyContext", { clear = true })
+local group = vim.api.nvim_create_augroup("Context", { clear = true })
 vim.api.nvim_create_autocmd({ "CursorMoved", "CursorMovedI", "WinScrolled", "BufEnter" }, {
     group = group,
     callback = update_ctx,
